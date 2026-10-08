@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "name": "Middle Flute Airy - Outer Lift Bass",
+  "version": "0.1.0",
+  "approved_date": null,
+  "approval": null,
+  "source_take": null,
+  "source_take_in_repository": false,
+  "instrument": "Bansuri; key and register of comparison recording not freshly confirmed",
+  "microphone": "beyerdynamic M160",
+  "application": "GarageBand 10.4.8",
+  "capture": {
+    "interface": "Focusrite Scarlett 4i4 4th Gen",
+    "input": 1,
+    "channels": "mono",
+    "sample_rate_hz": 44100,
+    "track_pan": "center",
+    "track_fader_db": -2.8,
+    "track_fader_note": "Matched to other comparison tracks; session balance must be checked separately when recalling a patch."
+  },
+  "insert_chain": [
+    {
+      "position": 1,
+      "plugin": "Compressor",
+      "enabled": false
+    },
+    {
+      "position": 2,
+      "plugin": "AUHipass",
+      "enabled": false
+    },
+    {
+      "position": 3,
+      "plugin": "PlatinumVerb",
+      "enabled": true,
+      "predelay_ms": 28,
+      "reverb_time_seconds": 2.3,
+      "high_cut_hz": 6000,
+      "spread_percent": 100,
+      "dry_percent": 100,
+      "wet_percent": 25,
+      "dry_wet_controls": "independent"
+    },
+    {
+      "position": 4,
+      "plugin": "Single Band EQ",
+      "enabled": true,
+      "type": "Parametric",
+      "frequency_hz": 1700,
+      "gain_db": 1.5,
+      "q": 0.51
+    },
+    {
+      "position": 5,
+      "plugin": "Single Band EQ",
+      "enabled": true,
+      "type": "High Shelf",
+      "frequency_hz": 4450,
+      "gain_db": 1.5,
+      "q": 0.71
+    },
+    {
+      "position": 6,
+      "plugin": "Single Band EQ",
+      "enabled": true,
+      "type": "Low Shelf",
+      "frequency_hz": 300,
+      "gain_db": 3.0,
+      "q": 0.71
+    },
+    {
+      "position": 7,
+      "plugin": "Single Band EQ",
+      "enabled": true,
+      "type": "High Shelf",
+      "frequency_hz": 6000,
+      "gain_db": 1.5,
+      "q": 0.71
+    }
+  ],
+  "ambience": {
+    "smart_control_display_percent": 10,
+    "native_aux_tag": "Ambience/0.2s Long Ambience",
+    "native_send_scalar": 0.08503936976194382,
+    "note": "The current session UI displayed 10% before this trial. The native send scalar is preserved verbatim and matches the original Middle Flute Airy patch; do not interpret the scalar as percent or dB."
+  },
+  "extra_reverb_send": {
+    "native_aux_tag": "Small Hall/1.6s Short Vocal Hall",
+    "native_send_scalar": 0.0
+  },
+  "other_processing": {
+    "noise_gate_enabled": false,
+    "master_echo_send": 0,
+    "master_reverb_send": 0,
+    "compression_enabled": false,
+    "limiting_enabled": false
+  },
+  "hardware_last_observed_not_saved_in_patch": {
+    "preamp_gain_db": 44,
+    "phantom_48v": false,
+    "air": false,
+    "inst": false,
+    "clip_safe": false,
+    "freshly_rechecked_for_this_library_save": false
+  },
+  "monitoring": "Saved with monitoring off and mute on for recorded comparison. For playback, unmute only the desired flute version. For later live use, monitor only one mic track and keep Scarlett direct mic monitoring muted to avoid doubling.",
+  "native_patch": "Middle Flute Airy - Outer Lift Bass.patch",
+  "scope_note": "Parent agent verified UI controls in GarageBand. Native patch preserves full saved plug-in state. New trial not yet user-approved; no assistant direct audio audition is claimed. Hardware gain, placement and master/backing balance are separate.",
+  "placement_note": "Keep the M160 outside the direct breath stream. No physical placement change was made or verified for this playback trial.",
+  "reference_target": {
+    "title": "Ranjha – Flute Cover by Divyansh Shrivastava",
+    "url": "https://www.youtube.com/watch?v=N9OOJjfTjM8",
+    "start_seconds": 5,
+    "end_seconds": 15,
+    "pitch_version": "original reference",
+    "confirmed_date": "2026-10-07",
+    "status": "User-confirmed target sound; not an exact-match claim for this preset",
+    "production_chain": "Unknown",
+    "assistant_direct_audio_audition": false,
+    "note": "Inherited artistic target from the original Middle Flute Airy. This additional bass-boost comparison awaits user feedback; no exact-match claim."
+  },
+  "created_date": "2026-10-08",
+  "status": "listening_trial_pending_user_feedback",
+  "based_on": "Middle Flute Airy - Outer Lift, with only its final 300 Hz low-shelf gain increased",
+  "source_session": "Kudmayi - Original Pitch - Middle Flute Airy.band (local only)",
+  "request_context": "User requested trying Outer Lift with a bass boost. This is a new trial, not approval of Outer Lift or this version.",
+  "comparison_source": "Same existing flute audio regions and timing used for playback comparison; no recording included in repository",
+  "session_state_at_save": {
+    "track_name": "Airy - Outer Lift Bass",
+    "track_pan": "center",
+    "flute_fader_db": -2.8,
+    "input": "mono Scarlett 1",
+    "monitoring_enabled": false,
+    "native_channel_is_muted": true,
+    "native_channel_is_solo": false,
+    "note": "Saved while muted. Unmute the chosen comparison track and keep other flute versions muted for playback."
+  },
+  "changes_from_original_current_session": [
+    {
+      "plugin": "Single Band EQ",
+      "type": "Low Shelf",
+      "frequency_hz": 300,
+      "gain_db": 3.0,
+      "q": 0.71
+    },
+    {
+      "plugin": "Single Band EQ",
+      "type": "High Shelf",
+      "frequency_hz": 6000,
+      "gain_db": 1.5,
+      "q": 0.71
+    }
+  ],
+  "independent_variant_note": "The duplicated 450 Hz trial insert was replaced by the 300 Hz low shelf; no 450 Hz or 900 Hz comparison boost remains. The original 1700 Hz presence bell and 4450 Hz +1.5 dB high shelf are retained. The new 6000 Hz high shelf is additional to the 4450 Hz shelf.",
+  "change_from_outer_lift": {
+    "plugin": "Single Band EQ",
+    "type": "Low Shelf",
+    "frequency_hz": 300,
+    "previous_gain_db": 1.0,
+    "new_gain_db": 3.0,
+    "gain_change_db": 2.0,
+    "q": 0.71,
+    "note": "Only this gain changed after duplicating Outer Lift; other EQ, reverb, ambience, fader and audio regions were retained."
+  }
+}
