@@ -1,8 +1,8 @@
 # Bass Flute
 
-**Version 1.2.0 — approved 2026-10-08.** After hearing the produced Kesariya mix, the user said: “This is lovely. Can you update the bass settings so we can recreate this?”
+**Version 1.2.1 — requested adjustment, 2026-10-08.** The user requested a tad less airiness and a little more reverb. The final 6000 Hz shelf is now **0 dB** (previously +1.5 dB), and PlatinumVerb wet is **28%** (previously 25%). Listening approval of this revision is pending.
 
-The updated **Bass Flute** patch saves the gentle production compressor and **−10 dB playback fader**, retaining the accepted EQ and PlatinumVerb settings. **Middle Flute Airy** remains unchanged; these are the two active sounds.
+The updated **Bass Flute** patch retains the gentle production compressor and **−10 dB playback fader**. All processing except those two values remains unchanged. **Middle Flute Airy** remains unchanged; these are the two active sounds.
 
 ## Saved processing
 
@@ -10,15 +10,15 @@ The updated **Bass Flute** patch saves the gentle production compressor and **�
 | --- | --- | --- |
 | 1 | Compressor | On; threshold **−18 dB**, ratio **1.8:1**, attack **26 ms**, makeup **+1 dB** |
 | 2 | AUHipass | Bypassed |
-| 3 | PlatinumVerb | On; predelay 28 ms; decay 2.30 s; high cut 6000 Hz; spread 100%; dry 100%; wet 25% |
+| 3 | PlatinumVerb | On; predelay 28 ms; decay 2.30 s; high cut 6000 Hz; spread 100%; dry 100%; wet 28% |
 | 4 | Single Band EQ — Parametric | On; 1700 Hz; +1.5 dB; Q 0.51 |
 | 5 | Single Band EQ — High Shelf | On; 4450 Hz; +1.5 dB; Q 0.71 |
 | 6 | Single Band EQ — Low Shelf | On; 300 Hz; +3.0 dB; Q 0.71 |
-| 7 | Single Band EQ — High Shelf | On; 6000 Hz; +1.5 dB; Q 0.71 |
+| 7 | Single Band EQ — High Shelf | On; 6000 Hz; 0 dB; Q 0.71 |
 
-PlatinumVerb's dry and wet controls are independent. The noise gate is off; no limiter is used. The four EQ parameter payloads, PlatinumVerb parameters and AUHipass state match the previous patch exactly.
+PlatinumVerb's dry and wet controls are independent. The noise gate is off; no limiter is used. Native payload comparison confirms only the final shelf gain and reverb wet level changed; reverb decay remains 2.30 seconds.
 
-The project UI displayed **Ambience 10%, Reverb 0%, master Echo/Reverb 0**. The saved native patch separately contains `Ambience/0.2s Long Ambience` send scalar `0.07086613029241562` and `Small Hall/1.6s Short Vocal Hall` send scalar `0.1445668488740921`. These native scalars are not percentages or dB values. Preserve the native patch to retain its routing; do not replace its nonzero saved Small Hall send with a claimed zero. A fresh recall and solo render reproduced the approved production sound.
+The project UI displays **Ambience 10%, Reverb 20%, master Echo/Reverb 0**. Reverb refreshed from 0% to 20% after the direct PlatinumVerb Wet edit; no macro or send was adjusted. The saved native patch separately contains `Ambience/0.2s Long Ambience` send scalar `0.07086613029241562` and `Small Hall/1.6s Short Vocal Hall` send scalar `0.1445668488740921`. These native scalars are not percentages or dB values. Preserve the native patch to retain its routing; do not replace its nonzero saved Small Hall send with a claimed zero. Both native sends are unchanged from version 1.2.0.
 
 ## Recall and record
 
@@ -29,9 +29,9 @@ The project UI displayed **Ambience 10%, Reverb 0%, master Echo/Reverb 0**. The 
 
 The track fader affects playback and software monitoring, not dry recording gain. The saved sound uses the **beyerdynamic M160**, kept outside the direct breath stream. Keep flute, playing level, mic distance and room consistent when recreating the result.
 
-## Recreate the approved Kesariya export
+## Historical recipe: approved Kesariya export (1.2.0)
 
-Use the local **Kesariya - Bass Flute - Production Mix.band** project and Bass Flute take #12. Its flute fader is **−10 dB**, accompaniment **−13 dB**, and project master **0 dB**. The backing uses **AUPitch +20 cents**, Effect Blend 100%, Smoothness 50%, Tightness 50%, quality Maximum; the flute has no pitch correction. That pitch offset fits this performance and must be checked separately for future takes.
+The earlier approved export used **Bass Flute 1.2.0**, before this air/reverb adjustment. To recreate that exact sound, restore `Sound Library/Bass Flute/Bass Flute.patch` from Git commit `d1e3d40ba415940f17e3b66cb308e372098a9439` or the local pre-adjustment backup. Use the local **Kesariya - Bass Flute - Production Mix.band** project and Bass Flute take #12. Its flute fader is **−10 dB**, accompaniment **−13 dB**, and project master **0 dB**. The backing uses **AUPitch +20 cents**, Effect Blend 100%, Smoothness 50%, Tightness 50%, quality Maximum; the flute has no pitch correction. That pitch offset fits this performance and must be checked separately for future takes.
 
 Disable GarageBand **Auto Normalize / Export projects at full volume** for the native export, then restore the prior preference afterward. The finished export uses **0–77 seconds**, raised-cosine fades of **0.04 seconds in** and **73–77 seconds out**, and **+6.16 dB gain after the native export**, yielding **−16 LUFS**. Do not add this gain to an already auto-normalized file. Final WAV is stereo 24-bit/44.1 kHz; MP3 is 320 kbps. Measured WAV true peak is about **−4.69 dBFS**, with no clipping and no limiter. These fades and master gain are an export recipe, not part of the track patch. Measure new performances before reusing that gain.
 
@@ -39,4 +39,6 @@ Disable GarageBand **Auto Normalize / Export projects at full volume** for the n
 
 The previous patch is backed up locally before replacement and remains available in Git history. Audio, recordings and GarageBand projects stay local and are excluded from Git. `settings.json` records the controls and the Kesariya recipe; `manifest.sha256` verifies the three small native patch files.
 
-The new native compressor settings and −10 dB fader are verified from the saved payload. EQ and PlatinumVerb parameters are unchanged. A fresh recall and solo 24-bit render matched the approved native flute export over all 77 seconds: correlation 0.9999999999999976, RMS difference −161.95 dBFS and effectively zero gain difference. This verifies the complete recalled processing, including the saved sends. No assistant direct audio audition is claimed.
+The current native patch is verified to differ from 1.2.0 in exactly the two requested settings. Compressor, other EQ/reverb parameters, bypass states, fader and native sends are unchanged.
+
+Version **1.2.0** passed a fresh recall and solo-render match to the approved native flute export (77 seconds; RMS difference −161.95 dBFS). That historical result does not claim that the current, intentionally changed 1.2.1 patch matches the older export. Listening feedback on 1.2.1 has not yet been received. No assistant direct audio audition is claimed.

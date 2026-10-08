@@ -5,13 +5,13 @@ Two retained bansuri sounds for the beyerdynamic M160 and Scarlett setup. This s
 | Sound | Use | Status |
 | --- | --- | --- |
 | [Middle Flute Airy](<Sound Library/Middle Flute Airy/README.md>) | Original middle-flute sound, developed with C# middle bansuri | Approved from take #03 on 2026-10-07; unchanged |
-| [Bass Flute](<Sound Library/Bass Flute/README.md>) | Approved Kesariya tone with gentle compression, warm EQ and reverb | Version 1.2.0, approved on 2026-10-08 |
+| [Bass Flute](<Sound Library/Bass Flute/README.md>) | Approved Kesariya tone with gentle compression, warm EQ and reverb | Version 1.2.1: requested less air and slightly more reverb; listening confirmation pending |
 
 Recall either sound in GarageBand through **Library → User Patches**. Each entry includes the native patch, readable instructions, verified settings and checksums. Hardware gain, mic placement, monitoring and accompaniment balance need separate checks.
 
 ## Bass Flute recall and recreation
 
-The Bass Flute patch now includes the approved gentle compressor: **-18 dB threshold, 1.8:1 ratio, 26 ms attack, +1 dB makeup**. Its existing EQ and PlatinumVerb settings are preserved. The [Bass Flute guide](<Sound Library/Bass Flute/README.md>) also records the Kesariya backing balance, pitch adjustment, fades and mastering recipe needed to recreate the finished mix. These song-specific settings remain separate from the reusable flute patch.
+The Bass Flute patch now includes the approved gentle compressor: **-18 dB threshold, 1.8:1 ratio, 26 ms attack, +1 dB makeup**. The latest requested adjustment reduces the final 6 kHz shelf from +1.5 to 0 dB and raises PlatinumVerb wet from 25% to 28%. All other processing is retained. The [Bass Flute guide](<Sound Library/Bass Flute/README.md>) also records the Kesariya backing balance, pitch adjustment, fades and mastering recipe needed to recreate the finished mix. These song-specific settings remain separate from the reusable flute patch.
 
 ## Bass Flute volume and Focusrite setup
 

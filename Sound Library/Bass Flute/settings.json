@@ -17,19 +17,19 @@
     "note": "Inherited artistic target from the original Middle Flute Airy. User approved this sound as the bass-flute option; this is not a claim of an exact reference match."
   },
   "created_date": "2026-10-08",
-  "status": "user_approved",
+  "status": "user_requested_adjustment",
   "native_patch": "Bass Flute.patch",
   "placement_note": "Keep the M160 outside the direct breath stream. No physical placement change was made or verified for this playback trial.",
   "retirement_note": "Only Middle Flute Airy and Bass Flute remain active. Intermediate settings and native presets are backed up locally under .audio-work/retired-presets/ and older tracked versions remain in Git history.",
-  "version": "1.2.0",
-  "approved_date": "2026-10-08",
+  "version": "1.2.1",
+  "approved_date": null,
   "updated_date": "2026-10-08",
-  "approval": "This is lovely. Can you update the bass settings so we can recreate this?",
+  "approval": null,
   "source_session": "Kesariya - Bass Flute - Production Mix.band (local only)",
   "source_take": "Bass Flute#12.wav (local only)",
   "source_take_in_repository": false,
-  "approval_scope": "User approved the produced Kesariya mix and requested saving its Bass Flute settings for reuse. Middle Flute Airy remains unchanged.",
-  "based_on": "Existing Bass Flute EQ and PlatinumVerb, with the approved production compressor and playback fader saved into the native patch.",
+  "approval_scope": "The user requested a little less airiness and a little more reverb. These two settings were implemented; listening approval of this revision is pending.",
+  "based_on": "User-approved Bass Flute 1.2.0; only the final 6000 Hz high shelf gain and PlatinumVerb wet level changed.",
   "capture": {
     "interface": "Focusrite Scarlett 4i4 4th Gen",
     "input": 1,
@@ -63,7 +63,7 @@
       "high_cut_hz": 6000,
       "spread_percent": 100,
       "dry_percent": 100,
-      "wet_percent": 25,
+      "wet_percent": 28,
       "dry_wet_controls": "independent"
     },
     {
@@ -99,7 +99,7 @@
       "enabled": true,
       "type": "High Shelf",
       "frequency_hz": 6000,
-      "gain_db": 1.5,
+      "gain_db": 0.0,
       "q": 0.71
     }
   ],
@@ -107,13 +107,14 @@
     "smart_control_display_percent": 10,
     "native_aux_tag": "Ambience/0.2s Long Ambience",
     "native_send_scalar": 0.07086613029241562,
-    "note": "Observed project UI and exact saved native scalar are separate facts. Do not convert this scalar directly to percent or dB. A fresh native patch recall and solo render reproduced the approved flute render."
+    "note": "Project UI displays 10%; native send scalar is unchanged from 1.2.0. Preserve the scalar verbatim rather than converting directly to percent or dB."
   },
   "extra_reverb_send": {
-    "smart_control_display_percent": 0,
+    "smart_control_display_percent": 20,
     "native_aux_tag": "Small Hall/1.6s Short Vocal Hall",
     "native_send_scalar": 0.1445668488740921,
-    "note": "The observed and recalled project Reverb control displayed 0%, while the native patch serializes this nonzero aux send. Preserve both observations; do not claim the saved send is zero. Native recall render verification passed."
+    "note": "The Smart Controls Reverb display refreshed from 0% to 20% after editing PlatinumVerb Wet directly. The native Small Hall send scalar is byte-identical to 1.2.0; neither the macro nor the send was adjusted. UI display and native send serialization are separate facts.",
+    "smart_control_observed_scalar": 0.20399988757
   },
   "other_processing": {
     "noise_gate_enabled": false,
@@ -159,27 +160,31 @@
   "verification": {
     "native_compressor_values_and_enable_verified": true,
     "native_fader_db_verified": -10.0,
-    "platinumverb_and_four_eq_parameter_payloads_byte_identical_to_previous_patch": true,
+    "only_intended_parameter_changes_verified": true,
+    "native_parameter_changes": [
+      {
+        "plugin": "PlatinumVerb",
+        "parameter": "Wet",
+        "before": 25,
+        "after": 28
+      },
+      {
+        "plugin": "Single Band EQ, final 6000 Hz High Shelf",
+        "parameter": "Gain dB",
+        "before": 1.5,
+        "after": 0.0
+      }
+    ],
+    "all_other_insert_parameters_unchanged": true,
+    "all_plugin_bypass_states_unchanged": true,
     "auhipass_bypass_and_state_unchanged": true,
-    "native_recall_render_qa": "passed",
-    "note": "Recalled the updated native patch after switching the temporary track to Middle Flute Airy; solo 24-bit render with Auto Normalize off reproduced the approved native flute render over 77 seconds. Native sends differ from the older patch but correctly reproduce the approved production. No assistant direct audio audition is claimed.",
-    "recall_verified": true,
-    "recall_audio_comparison": {
-      "frames_compared": 3395700,
-      "seconds": 77.0,
-      "sample_rates": [
-        44100,
-        44100
-      ],
-      "max_absolute_difference": 3.5762786865234375e-07,
-      "difference_rms_dbfs": -161.95167442882183,
-      "relative_rms_difference_db": -135.78253090636983,
-      "gain_ratio_db": -3.8742530998868936e-10,
-      "correlation": 0.9999999999999976
-    }
+    "native_sends_unchanged_from_version": "1.2.0",
+    "native_recall_render_qa": "not_performed_for_1.2.1",
+    "recall_verified": false,
+    "note": "Saved native payload comparison proves exactly the requested two parameter changes. No claim that 1.2.1 sounds identical to the earlier approved export; the old render match applies only to 1.2.0. No assistant direct audio audition is claimed."
   },
   "production_recipe": {
-    "scope": "Kesariya-specific project and final export; these backing, pitch and mastering settings are not baked into the reusable Bass Flute track patch.",
+    "scope": "Historical recipe for the approved Kesariya export using Bass Flute 1.2.0. The current 1.2.1 patch intentionally changes the sound; restore the earlier patch to reproduce the original export. Backing, pitch and mastering settings are not baked into the reusable track patch.",
     "project": "Kesariya - Bass Flute - Production Mix.band (local only)",
     "flute_track_fader_db": -10.0,
     "flute_pitch_correction": "none",
@@ -221,6 +226,62 @@
       "smoothness_percent": 50,
       "tightness_percent": 50,
       "quality": "Maximum"
+    },
+    "patch_version": "1.2.0",
+    "patch_restore_git_commit": "d1e3d40ba415940f17e3b66cb308e372098a9439",
+    "patch_restore_path": "Sound Library/Bass Flute/Bass Flute.patch"
+  },
+  "previous_version_approval": {
+    "version": "1.2.0",
+    "date": "2026-10-08",
+    "approval": "This is lovely. Can you update the bass settings so we can recreate this?",
+    "scope": "User approved the produced Kesariya mix and requested saving its Bass Flute settings for reuse. Middle Flute Airy remains unchanged.",
+    "git_commit": "d1e3d40ba415940f17e3b66cb308e372098a9439"
+  },
+  "requested_adjustment": {
+    "date": "2026-10-08",
+    "request_summary": "A tad less airy and a little more reverb.",
+    "listening_approved": false,
+    "changes": [
+      {
+        "plugin": "Single Band EQ",
+        "position": 7,
+        "type": "High Shelf",
+        "frequency_hz": 6000,
+        "before_gain_db": 1.5,
+        "after_gain_db": 0.0
+      },
+      {
+        "plugin": "PlatinumVerb",
+        "position": 3,
+        "before_wet_percent": 25,
+        "after_wet_percent": 28
+      }
+    ]
+  },
+  "historical_verification": {
+    "version": "1.2.0",
+    "verification": {
+      "native_compressor_values_and_enable_verified": true,
+      "native_fader_db_verified": -10.0,
+      "platinumverb_and_four_eq_parameter_payloads_byte_identical_to_previous_patch": true,
+      "auhipass_bypass_and_state_unchanged": true,
+      "native_recall_render_qa": "passed",
+      "note": "Recalled the updated native patch after switching the temporary track to Middle Flute Airy; solo 24-bit render with Auto Normalize off reproduced the approved native flute render over 77 seconds. Native sends differ from the older patch but correctly reproduce the approved production. No assistant direct audio audition is claimed.",
+      "recall_verified": true,
+      "recall_audio_comparison": {
+        "frames_compared": 3395700,
+        "seconds": 77.0,
+        "sample_rates": [
+          44100,
+          44100
+        ],
+        "max_absolute_difference": 3.5762786865234375e-07,
+        "difference_rms_dbfs": -161.95167442882183,
+        "relative_rms_difference_db": -135.78253090636983,
+        "gain_ratio_db": -3.8742530998868936e-10,
+        "correlation": 0.9999999999999976
+      }
     }
   }
 }
