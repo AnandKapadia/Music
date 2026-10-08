@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "name": "Middle Flute Airy",
+  "version": "1.0.0",
+  "approved_date": "2026-10-07",
+  "approval": "I love the sound of this",
+  "source_take": "Bansuri Csharp M160 - Ranjha Smooth Presence#03.wav",
+  "source_take_in_repository": false,
+  "instrument": "C# middle bansuri",
+  "microphone": "beyerdynamic M160",
+  "application": "GarageBand 10.4.8",
+  "capture": {
+    "interface": "Focusrite Scarlett 4i4 4th Gen",
+    "input": 1,
+    "channels": "mono",
+    "sample_rate_hz": 44100,
+    "track_pan": "center",
+    "track_fader_db": 0.0
+  },
+  "insert_chain": [
+    {
+      "position": 1,
+      "plugin": "Compressor",
+      "enabled": false
+    },
+    {
+      "position": 2,
+      "plugin": "AUHipass",
+      "enabled": false
+    },
+    {
+      "position": 3,
+      "plugin": "PlatinumVerb",
+      "enabled": true,
+      "predelay_ms": 28,
+      "reverb_time_seconds": 2.3,
+      "high_cut_hz": 6000,
+      "spread_percent": 100,
+      "dry_percent": 100,
+      "wet_percent": 25,
+      "dry_wet_controls": "independent"
+    },
+    {
+      "position": 4,
+      "plugin": "Single Band EQ",
+      "enabled": true,
+      "type": "Parametric",
+      "frequency_hz": 1700,
+      "gain_db": 1.5,
+      "q": 0.51
+    },
+    {
+      "position": 5,
+      "plugin": "Single Band EQ",
+      "enabled": true,
+      "type": "High Shelf",
+      "frequency_hz": 4450,
+      "gain_db": 1.5,
+      "q": 0.71
+    }
+  ],
+  "ambience": {
+    "smart_control_percent": 12,
+    "native_aux_tag": "Ambience/0.2s Long Ambience",
+    "native_send_scalar": 0.08503936976194382
+  },
+  "extra_reverb_send": {
+    "native_aux_tag": "Small Hall/1.6s Short Vocal Hall",
+    "native_send_scalar": 0.0
+  },
+  "other_processing": {
+    "noise_gate_enabled": false,
+    "master_echo_send": 0,
+    "master_reverb_send": 0,
+    "compression_enabled": false,
+    "limiting_enabled": false
+  },
+  "hardware_last_observed_not_saved_in_patch": {
+    "preamp_gain_db": 44,
+    "phantom_48v": false,
+    "air": false,
+    "inst": false,
+    "clip_safe": false,
+    "freshly_rechecked_for_this_library_save": false
+  },
+  "monitoring": "Use software monitoring for only one live mic track; direct Scarlett mic monitor stays muted to avoid doubling.",
+  "native_patch": "Middle Flute Airy.patch",
+  "scope_note": "UI-verified controls are listed here. The native patch retains other plug-in state. Hardware gain, mic placement, master bus and backing-track balance must be checked separately.",
+  "placement_note": "Keep the M160 outside the direct breath stream. For the approved session, the suggested aim was between the blowing hole and first finger holes; physical position was not visually verified."
+}

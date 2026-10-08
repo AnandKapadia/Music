@@ -1,0 +1,14 @@
+# Settings library only. Everything else stays on this Mac.
+*
+!/.gitignore
+!/README.md
+!/AGENTS.md
+!/Sound Library/
+!/Sound Library/*/
+!/Sound Library/*/README.md
+!/Sound Library/*/settings.json
+!/Sound Library/*/manifest.sha256
+!/Sound Library/*/*.patch/
+!/Sound Library/*/*.patch/data.plist
+!/Sound Library/*/*.patch/com.apple.musicapps.metadata.plist
+!/Sound Library/*/*.patch/\#Root.cst
