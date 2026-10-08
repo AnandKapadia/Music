@@ -86,5 +86,17 @@
   "monitoring": "Use software monitoring for only one live mic track; direct Scarlett mic monitor stays muted to avoid doubling.",
   "native_patch": "Middle Flute Airy.patch",
   "scope_note": "UI-verified controls are listed here. The native patch retains other plug-in state. Hardware gain, mic placement, master bus and backing-track balance must be checked separately.",
-  "placement_note": "Keep the M160 outside the direct breath stream. For the approved session, the suggested aim was between the blowing hole and first finger holes; physical position was not visually verified."
+  "placement_note": "Keep the M160 outside the direct breath stream. For the approved session, the suggested aim was between the blowing hole and first finger holes; physical position was not visually verified.",
+  "reference_target": {
+    "title": "Ranjha \u2013 Flute Cover by Divyansh Shrivastava",
+    "url": "https://www.youtube.com/watch?v=N9OOJjfTjM8",
+    "start_seconds": 5,
+    "end_seconds": 15,
+    "pitch_version": "original reference",
+    "confirmed_date": "2026-10-07",
+    "status": "User-confirmed target sound; not an exact-match claim for this preset",
+    "production_chain": "Unknown",
+    "assistant_direct_audio_audition": false,
+    "note": "Middle Flute Airy remains the user-approved take #03 preset. Documenting this target window does not change its EQ, reverb, ambience or native patch."
+  }
 }

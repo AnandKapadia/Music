@@ -2,6 +2,12 @@
 
 Approved from **take #03** on 2026-10-07: “I love the sound of this.” C# middle bansuri recorded through the beyerdynamic M160 into Scarlett input 1. The sound keeps the natural low-note body and adds broad presence, a little upper-frequency air, hall reverb, and short ambience.
 
+## Reference target
+
+The user confirmed **0:05–0:15 of the original [Ranjha – Flute Cover by Divyansh Shrivastava](https://www.youtube.com/watch?v=N9OOJjfTjM8)** as the desired flute sound. This is the target for further comparison; it does not establish an exact sonic match or reveal the reference’s production chain, which remains unknown. The assistant has not directly auditioned the audio.
+
+**Middle Flute Airy remains the approved take #03 preset.** Documenting this target leaves every saved effect value and the native patch unchanged.
+
 ## Saved processing
 
 The insert order matters. Compressor and AUHipass remain in the patch but are bypassed.
