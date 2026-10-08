@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "name": "Middle Flute Airy - Outer Lift",
-  "version": "0.1.0",
-  "approved_date": null,
-  "approval": null,
+  "name": "Bass Flute",
+  "version": "1.0.0",
+  "approved_date": "2026-10-08",
+  "approval": "I do like this, can you save this as the bass flute option? Only retain the middle and the bass, all the middle settings are not needed",
   "source_take": null,
   "source_take_in_repository": false,
-  "instrument": "Bansuri; key and register of comparison recording not freshly confirmed",
+  "instrument": "Bass bansuri; exact key not confirmed for this saved option",
   "microphone": "beyerdynamic M160",
   "application": "GarageBand 10.4.8",
   "capture": {
@@ -15,8 +15,8 @@
     "channels": "mono",
     "sample_rate_hz": 44100,
     "track_pan": "center",
-    "track_fader_db": -2.8,
-    "track_fader_note": "Matched to other comparison tracks; session balance must be checked separately when recalling a patch."
+    "track_fader_db": 0.0,
+    "track_fader_note": "User changed the current flute fader to 0 dB before this final save. Recheck listening balance independently when recalling."
   },
   "insert_chain": [
     {
@@ -65,7 +65,7 @@
       "enabled": true,
       "type": "Low Shelf",
       "frequency_hz": 300,
-      "gain_db": 1.0,
+      "gain_db": 3.0,
       "q": 0.71
     },
     {
@@ -103,9 +103,9 @@
     "clip_safe": false,
     "freshly_rechecked_for_this_library_save": false
   },
-  "monitoring": "Saved with monitoring off and mute on for recorded comparison. For playback, unmute only the desired flute version. For later live use, monitor only one mic track and keep Scarlett direct mic monitoring muted to avoid doubling.",
-  "native_patch": "Middle Flute Airy - Outer Lift.patch",
-  "scope_note": "Parent agent verified UI controls in GarageBand. Native patch preserves full saved plug-in state. New trial not yet user-approved; no assistant direct audio audition is claimed. Hardware gain, placement and master/backing balance are separate.",
+  "monitoring": "Saved unmuted with monitoring off for recorded playback. For live use, monitor only one mono input 1 mic track and keep Scarlett direct mic monitoring muted to avoid doubling.",
+  "native_patch": "Bass Flute.patch",
+  "scope_note": "Parent agent verified the tonal controls in GarageBand and confirmed the final patch retains the accepted Outer Lift Bass chain. User explicitly approved this as Bass Flute. No assistant direct audio audition or exact-reference claim is made. Hardware gain, placement and master/backing balance are separate.",
   "placement_note": "Keep the M160 outside the direct breath stream. No physical placement change was made or verified for this playback trial.",
   "reference_target": {
     "title": "Ranjha – Flute Cover by Divyansh Shrivastava",
@@ -117,30 +117,30 @@
     "status": "User-confirmed target sound; not an exact-match claim for this preset",
     "production_chain": "Unknown",
     "assistant_direct_audio_audition": false,
-    "note": "Inherited artistic target from the original Middle Flute Airy. This independent low/high shelf trial awaits user feedback; no exact-match claim."
+    "note": "Inherited artistic target from the original Middle Flute Airy. User approved this sound as the bass-flute option; this is not a claim of an exact reference match."
   },
   "created_date": "2026-10-08",
-  "status": "listening_trial_pending_user_feedback",
-  "based_on": "Original Middle Flute Airy sound with current Kudmayi session ambience and track level preserved",
+  "status": "user_approved",
+  "based_on": "User-approved Middle Flute Airy - Outer Lift Bass tonal chain; renamed Bass Flute",
   "source_session": "Kudmayi - Original Pitch - Middle Flute Airy.band (local only)",
-  "request_context": "The user said the body was pretty good and asked for another option lifting frequencies outside that area. This does not establish approval of this new trial or a preference between the earlier 450 Hz and 900 Hz trials.",
-  "comparison_source": "Same existing flute audio regions and timing used for playback comparison; no recording included in repository",
+  "request_context": "User approved this sound as the bass-flute option and requested retaining only the original middle-flute sound and this bass sound. Intermediate presets were retired to a local ignored archive.",
+  "comparison_source": "Accepted on the existing Kudmayi recording; audio regions and timing preserved locally, with no recording in repository.",
   "session_state_at_save": {
-    "track_name": "Airy - Outer Lift",
+    "track_name": "Bass Flute",
     "track_pan": "center",
-    "flute_fader_db": -2.8,
+    "flute_fader_db": 0.0,
     "input": "mono Scarlett 1",
     "monitoring_enabled": false,
-    "native_channel_is_muted": true,
+    "native_channel_is_muted": false,
     "native_channel_is_solo": false,
-    "note": "Saved while muted. Unmute the chosen comparison track and keep other flute versions muted for playback."
+    "note": "Saved unmuted with monitoring off for playback. For live use, enable monitoring on only one mic track."
   },
   "changes_from_original_current_session": [
     {
       "plugin": "Single Band EQ",
       "type": "Low Shelf",
       "frequency_hz": 300,
-      "gain_db": 1.0,
+      "gain_db": 3.0,
       "q": 0.71
     },
     {
@@ -151,5 +151,17 @@
       "q": 0.71
     }
   ],
-  "independent_variant_note": "The duplicated 450 Hz trial insert was replaced by the 300 Hz low shelf; no 450 Hz or 900 Hz comparison boost remains. The original 1700 Hz presence bell and 4450 Hz +1.5 dB high shelf are retained. The new 6000 Hz high shelf is additional to the 4450 Hz shelf."
+  "independent_variant_note": "The duplicated 450 Hz trial insert was replaced by the 300 Hz low shelf; no 450 Hz or 900 Hz comparison boost remains. The original 1700 Hz presence bell and 4450 Hz +1.5 dB high shelf are retained. The new 6000 Hz high shelf is additional to the 4450 Hz shelf.",
+  "change_from_outer_lift": {
+    "plugin": "Single Band EQ",
+    "type": "Low Shelf",
+    "frequency_hz": 300,
+    "previous_gain_db": 1.0,
+    "new_gain_db": 3.0,
+    "gain_change_db": 2.0,
+    "q": 0.71,
+    "note": "Only this gain changed after duplicating Outer Lift; other EQ, reverb, ambience, fader and audio regions were retained."
+  },
+  "approval_scope": "Approved as the retained bass-flute option. The earlier middle-flute preset remains unchanged.",
+  "retirement_note": "Only Middle Flute Airy and Bass Flute remain active. Intermediate settings and native presets are backed up locally under .audio-work/retired-presets/ and older tracked versions remain in Git history."
 }
