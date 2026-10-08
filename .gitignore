@@ -12,3 +12,11 @@
 !/Sound Library/*/*.patch/data.plist
 !/Sound Library/*/*.patch/com.apple.musicapps.metadata.plist
 !/Sound Library/*/*.patch/\#Root.cst
+
+# Exact Focusrite settings snapshot; no global application settings.
+!/Hardware/
+!/Hardware/Focusrite Scarlett 4i4/
+!/Hardware/Focusrite Scarlett 4i4/README.md
+!/Hardware/Focusrite Scarlett 4i4/settings.json
+!/Hardware/Focusrite Scarlett 4i4/manifest.sha256
+!/Hardware/Focusrite Scarlett 4i4/Bass Flute - GarageBand - 68 dB.xml

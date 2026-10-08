@@ -1,0 +1,322 @@
+{
+  "schema_version": 1,
+  "name": "Bass Flute - GarageBand - 68 dB",
+  "saved_date": "2026-10-08",
+  "scope": "Native Focusrite Control 2 hardware, mixer and routing preset for the existing Bass Flute sound.",
+  "interface": "Focusrite Scarlett 4i4 4th Gen",
+  "application": "Focusrite Control 2",
+  "device_product_id_decimal": 33306,
+  "device_product_id_hex": "0x821A",
+  "native_preset": "Bass Flute - GarageBand - 68 dB.xml",
+  "native_preset_sha256": "b8e00d4e2c2a0d7a6af7a35dbedc946282131df6ffa8be9d215e649e76eab698",
+  "native_preset_format_version": 4,
+  "native_preset_created": "20261008T145755.549-0500",
+  "native_preset_modified": "20261008T145755.549-0500",
+  "native_local_filename": "7473d8fa952d4d1b9965b10ea2ac2b9d.xml",
+  "native_local_directory": "~/Library/Application Support/Focusrite/Focusrite Control 2/Presets/0x821A/",
+  "capture_input": {
+    "input": 1,
+    "channels": "mono",
+    "microphone": "beyerdynamic M160"
+  },
+  "inputs": {
+    "Analogue 1": {
+      "preamp_gain_db": 68.0,
+      "phantom_48v": false,
+      "air": false,
+      "inst": false,
+      "mode": "line",
+      "clip_safe": false,
+      "linked": false
+    },
+    "Analogue 2": {
+      "preamp_gain_db": 12.0,
+      "phantom_48v": false,
+      "air": false,
+      "inst": false,
+      "mode": "line",
+      "clip_safe": false,
+      "linked": false
+    },
+    "Analogue 3": {
+      "mode": "line"
+    },
+    "Analogue 4": {
+      "mode": "line"
+    }
+  },
+  "mixes": {
+    "Mix A": {
+      "Analogue 1": {
+        "level_db": -12.0,
+        "muted": true,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": false,
+        "stereo_pair": null
+      },
+      "Analogue 2": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": false,
+        "stereo_pair": null
+      },
+      "Analogue 3": {
+        "level_db": 0.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Analogue 3 - 4"
+      },
+      "Analogue 4": {
+        "level_db": 0.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Analogue 3 - 4"
+      },
+      "Playback 1": {
+        "level_db": -12.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 1 - 2"
+      },
+      "Playback 2": {
+        "level_db": -12.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 1 - 2"
+      },
+      "Playback 3": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 3 - 4"
+      },
+      "Playback 4": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 3 - 4"
+      },
+      "Playback 5": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 5 - 6"
+      },
+      "Playback 6": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 5 - 6"
+      }
+    },
+    "Mix B": {
+      "Analogue 1": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": false,
+        "stereo_pair": null
+      },
+      "Analogue 2": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": false,
+        "stereo_pair": null
+      },
+      "Analogue 3": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Analogue 3 - 4"
+      },
+      "Analogue 4": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Analogue 3 - 4"
+      },
+      "Playback 1": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 1 - 2"
+      },
+      "Playback 2": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 1 - 2"
+      },
+      "Playback 3": {
+        "level_db": 0.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 3 - 4"
+      },
+      "Playback 4": {
+        "level_db": 0.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 3 - 4"
+      },
+      "Playback 5": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 5 - 6"
+      },
+      "Playback 6": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 5 - 6"
+      }
+    },
+    "Mix C": {
+      "Analogue 1": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": false,
+        "stereo_pair": null
+      },
+      "Analogue 2": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": false,
+        "stereo_pair": null
+      },
+      "Analogue 3": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Analogue 3 - 4"
+      },
+      "Analogue 4": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Analogue 3 - 4"
+      },
+      "Playback 1": {
+        "level_db": 0.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 1 - 2"
+      },
+      "Playback 2": {
+        "level_db": 0.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 1 - 2"
+      },
+      "Playback 3": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 3 - 4"
+      },
+      "Playback 4": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 3 - 4"
+      },
+      "Playback 5": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 5 - 6"
+      },
+      "Playback 6": {
+        "level_db": -128.0,
+        "muted": false,
+        "solo": false,
+        "pan": "center",
+        "stereo_linked": true,
+        "stereo_pair": "Playback 5 - 6"
+      }
+    }
+  },
+  "outputs": {
+    "Analogue 1/2": "Mix A",
+    "Headphones": "Mix A",
+    "Analogue 3/4": "Mix B",
+    "Loopback 1/2": "Mix C"
+  },
+  "sample_rate_observation": {
+    "hz": 44100,
+    "observed_in": "Focusrite Control 2 UI",
+    "saved_in_native_preset": false
+  },
+  "not_saved_in_native_preset": [
+    "GarageBand track faders",
+    "GarageBand sound effects",
+    "sample rate",
+    "physical headphone/output knob positions"
+  ],
+  "gain_note": "Input 1 gain was observed live and saved at 68 dB without changing it. This preamp gain affects the recorded signal. It is distinct from the GarageBand playback/monitor fader.",
+  "monitoring_note": "Mix A direct Analogue 1 is muted; processed flute returns through Playback 1/2 at -12 dB. Monitor only one GarageBand mono input 1 flute track.",
+  "validation": {
+    "live_ui_checked_by_parent_agent": true,
+    "native_xml_checked": true,
+    "native_copy_byte_identical": true,
+    "no_credentials_or_serial_identifiers_found": true,
+    "global_focusrite_settings_file_included": false
+  }
+}

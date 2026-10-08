@@ -24,10 +24,16 @@ Current session Ambience displayed **10%**. Native routing is `Ambience/0.2s Lon
 
 1. Select a mono audio track and choose **Library → User Patches → Bass Flute**. It is installed on this Mac.
 2. Use mono Scarlett input 1 for the M160. The patch was saved **unmuted**, with **monitoring off** for playback. For live playing, enable monitoring on only the desired mic track; keep Scarlett direct mic monitoring muted to avoid doubling.
-3. The user set the flute fader to **0 dB** before this final save. Set accompaniment balance separately and check recording headroom. Hardware gain, master level and physical placement are not part of this tone preset.
+3. After recalling the patch, manually set the Bass Flute track fader to **-10 dB for playback** or **-4.0 dB while recording**. These preferences were confirmed on 2026-10-08. The unchanged native tonal patch still contains its historical 0 dB fader; recalling it does not automatically apply or switch the new levels. Set accompaniment balance separately.
 4. On another Mac, copy the entire `Bass Flute.patch` folder to `~/Music/Audio Music Apps/Patches/Audio/`, then reopen GarageBand if needed.
 
-Keep the M160 outside the direct breath stream. Hardware gain and routing were not freshly checked for this save. A preset does not reproduce differences in breath, flute, distance or room.
+## Gain and monitoring
+
+The Bass Flute track fader controls playback and software monitoring volume. It does **not** change the dry input recording level. Use the **Focusrite input 1 preamp gain of 68 dB**, observed live and saved on 2026-10-08, for the saved hardware setup. Input 1 has 48V, Inst, Air and Clip Safe off. Gain was preserved as found; this is separate from the tonal patch.
+
+The native Focusrite preset **Bass Flute - GarageBand - 68 dB** and its verified routing are saved in the [hardware settings](<../../Hardware/Focusrite Scarlett 4i4/README.md>). Mix A feeds the headphones; direct Analogue 1 is muted and GarageBand Playback 1/2 is at -12 dB. Use only one monitored mono input 1 flute track.
+
+Keep the M160 outside the direct breath stream. A preset does not reproduce differences in breath, flute, distance or room.
 
 ## Preservation
 
@@ -35,4 +41,4 @@ The source is the local **Kudmayi - Original Pitch - Middle Flute Airy.band** se
 
 The inherited artistic reference is the [Ranjha flute cover](https://www.youtube.com/watch?v=N9OOJjfTjM8), especially 0:05–0:15. Its production chain is unknown, and the assistant has not directly auditioned its audio. User approval of this bass sound is not an exact-match claim.
 
-`Bass Flute.patch` is a byte-for-byte copy of the final native saved User Patch. `settings.json` records verified controls, and `manifest.sha256` verifies the three small native files. The native channel name is **Bass Flute**.
+`Bass Flute.patch` remains a byte-for-byte copy of the original accepted native User Patch; its EQ/reverb and the Middle Flute Airy patch were not changed for the volume and hardware save. `settings.json` records verified controls, and `manifest.sha256` verifies the three small native files. The native channel name is **Bass Flute**.

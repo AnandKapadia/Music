@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "name": "Bass Flute",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "approved_date": "2026-10-08",
   "approval": "I do like this, can you save this as the bass flute option? Only retain the middle and the bass, all the middle settings are not needed",
   "source_take": null,
@@ -16,7 +16,7 @@
     "sample_rate_hz": 44100,
     "track_pan": "center",
     "track_fader_db": 0.0,
-    "track_fader_note": "User changed the current flute fader to 0 dB before this final save. Recheck listening balance independently when recalling."
+    "track_fader_note": "Historical fader saved in the unchanged native tonal patch: 0 dB. After recalling the patch, apply the current manual volume profile: -10 dB playback or -4.0 dB recording/monitoring."
   },
   "insert_chain": [
     {
@@ -96,14 +96,18 @@
     "limiting_enabled": false
   },
   "hardware_last_observed_not_saved_in_patch": {
-    "preamp_gain_db": 44,
+    "preamp_gain_db": 68.0,
     "phantom_48v": false,
     "air": false,
     "inst": false,
     "clip_safe": false,
-    "freshly_rechecked_for_this_library_save": false
+    "freshly_rechecked_for_this_library_save": true,
+    "observed_date": "2026-10-08",
+    "native_focusrite_preset": "Bass Flute - GarageBand - 68 dB",
+    "settings_path": "../../Hardware/Focusrite Scarlett 4i4/settings.json",
+    "note": "Observed and saved from the live interface without changing gain. Supersedes the old unverified 44 dB entry. Hardware settings are saved separately from the unchanged GarageBand tone patch."
   },
-  "monitoring": "Saved unmuted with monitoring off for recorded playback. For live use, monitor only one mono input 1 mic track and keep Scarlett direct mic monitoring muted to avoid doubling.",
+  "monitoring": "The unchanged native tone patch was saved with monitoring off for playback. Use -10 dB track fader for playback; use -4.0 dB and enable monitoring on only one mono input 1 mic track for recording/live playing. Keep Scarlett direct Analogue 1 muted in Mix A.",
   "native_patch": "Bass Flute.patch",
   "scope_note": "Parent agent verified the tonal controls in GarageBand and confirmed the final patch retains the accepted Outer Lift Bass chain. User explicitly approved this as Bass Flute. No assistant direct audio audition or exact-reference claim is made. Hardware gain, placement and master/backing balance are separate.",
   "placement_note": "Keep the M160 outside the direct breath stream. No physical placement change was made or verified for this playback trial.",
@@ -133,7 +137,7 @@
     "monitoring_enabled": false,
     "native_channel_is_muted": false,
     "native_channel_is_solo": false,
-    "note": "Saved unmuted with monitoring off for playback. For live use, enable monitoring on only one mic track."
+    "note": "Historical state of the original native tonal patch; its 0 dB fader and monitoring-off state are unchanged. Current preferred manual levels are -10 dB playback and -4.0 dB recording/monitoring."
   },
   "changes_from_original_current_session": [
     {
@@ -162,6 +166,19 @@
     "q": 0.71,
     "note": "Only this gain changed after duplicating Outer Lift; other EQ, reverb, ambience, fader and audio regions were retained."
   },
-  "approval_scope": "Approved as the retained bass-flute option. The earlier middle-flute preset remains unchanged.",
-  "retirement_note": "Only Middle Flute Airy and Bass Flute remain active. Intermediate settings and native presets are backed up locally under .audio-work/retired-presets/ and older tracked versions remain in Git history."
+  "approval_scope": "Approved as the retained bass-flute option. The earlier middle-flute preset remains unchanged. On 2026-10-08 the user also approved manual Bass Flute track levels of -10 dB playback and -4.0 dB recording/monitoring and requested saving the live Focusrite setup.",
+  "retirement_note": "Only Middle Flute Airy and Bass Flute remain active. Intermediate settings and native presets are backed up locally under .audio-work/retired-presets/ and older tracked versions remain in Git history.",
+  "updated_date": "2026-10-08",
+  "volume_profiles": {
+    "approved_date": "2026-10-08",
+    "approval": "I like the volumen to be -10 on playback, and -4.0 on record for the bass flute.",
+    "control": "GarageBand Bass Flute track fader",
+    "playback_track_fader_db": -10.0,
+    "record_monitor_track_fader_db": -4.0,
+    "switching": "manual",
+    "automatic_switching_configured": false,
+    "raw_recording_gain_changed_by_track_fader": false,
+    "native_tonal_patch_rewritten_for_volume_preferences": false,
+    "note": "Set the track fader after recalling the sound and when changing between recording and playback. These preferences do not change the Focusrite preamp gain or the raw recorded audio."
+  }
 }
