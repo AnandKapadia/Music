@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "name": "Middle Flute Airy - Softer Air",
-  "version": "1.0.0",
-  "approved_date": "2026-10-08",
-  "approval": "I like this, I think it needs more body on the deep side.",
+  "name": "Bass Flute - Warm Body",
+  "version": "0.1.0",
+  "approved_date": null,
+  "approval": null,
   "source_take": null,
   "source_take_in_repository": false,
-  "instrument": "Middle bansuri; current flute pitch not rechecked",
+  "instrument": "Bass bansuri; key not confirmed for this session",
   "microphone": "beyerdynamic M160",
   "application": "GarageBand 10.4.8",
   "capture": {
@@ -15,7 +15,7 @@
     "channels": "mono",
     "sample_rate_hz": 44100,
     "track_pan": "center",
-    "track_fader_db": -3.7,
+    "track_fader_db": -2.8,
     "track_fader_note": "Session value observed at save; balance, hardware and monitoring must be checked separately when recalling a patch."
   },
   "insert_chain": [
@@ -61,23 +61,22 @@
     },
     {
       "position": 6,
-      "plugin": "Channel EQ",
+      "plugin": "Single Band EQ",
       "enabled": true,
-      "preset_display": "Factory Default",
-      "response_observed": "flat 0 dB",
-      "low_cut_enabled": false,
-      "high_cut_enabled": false,
-      "master_gain_db": 0.0,
-      "note": "Already present before this task and preserved. Full band state is in the native patch; individual frequency and Q controls were not transcribed."
+      "type": "Parametric",
+      "frequency_hz": 350,
+      "gain_db": 2.0,
+      "q": 0.71,
+      "replaces": "Previously flat Channel EQ at the end of the insert chain"
     }
   ],
   "ambience": {
-    "smart_control_normalized_value": 0.04800000521871779,
-    "smart_control_percent": 4.800000521871779,
-    "smart_control_display_percent": 5,
+    "smart_control_normalized_value": 0.1000000059604645,
+    "smart_control_percent": 10.00000059604645,
+    "smart_control_display_percent": 10,
     "native_aux_tag": "Ambience/0.2s Long Ambience",
     "native_send_scalar": 0.07086615264415741,
-    "note": "This lower ambience value already existed in the Kudmayi session before the softer-air edit. The approved original Middle Flute Airy patch remains at 12%."
+    "note": "The user had independently changed Ambience to 10% before the body refinement. UI display and native send scalar are recorded separately; the scalar is not a percentage or dB value and matches the prior Softer Air patch despite its different observed UI display."
   },
   "extra_reverb_send": {
     "native_aux_tag": "Small Hall/1.6s Short Vocal Hall",
@@ -99,7 +98,7 @@
     "freshly_rechecked_for_this_library_save": false
   },
   "monitoring": "Mono Scarlett input 1; software monitoring on for this mic track, feedback protection off for headphones. Direct Scarlett mic monitoring should remain muted to avoid doubling; hardware routing was not freshly rechecked in this task.",
-  "native_patch": "Middle Flute Airy - Softer Air.patch",
+  "native_patch": "Bass Flute - Warm Body.patch",
   "scope_note": "Controls were verified by the parent agent in GarageBand. The native patch retains the full saved plug-in state. Hardware gain, mic placement, master bus and backing-track balance are separate. No new recording or exact-match audio claim is made.",
   "placement_note": "Keep the M160 outside the direct breath stream. No physical placement change was requested or verified for this trial.",
   "reference_target": {
@@ -112,26 +111,26 @@
     "status": "User-confirmed target sound; not an exact-match claim for this preset",
     "production_chain": "Unknown",
     "assistant_direct_audio_audition": false,
-    "note": "Inherited artistic target from Middle Flute Airy. User liked this softer-air direction and requested additional low-register body; no exact reference-match claim."
+    "note": "Inherited artistic target from Middle Flute Airy. This bass-flute body refinement is a new listening trial awaiting user feedback; no exact reference-match claim."
   },
   "created_date": "2026-10-08",
-  "status": "user_liked_reduced_breathiness_body_refinement_requested",
-  "based_on": "Middle Flute Airy, with current Kudmayi session settings preserved",
+  "status": "listening_trial_pending_user_feedback",
+  "based_on": "Middle Flute Airy - Softer Air, with current Kudmayi session settings preserved",
   "source_session": "Kudmayi - Original Pitch - Middle Flute Airy.band (local only)",
   "session_levels_not_sound_design_changes": {
-    "flute_fader_db": -3.7,
+    "flute_fader_db": -2.8,
     "backing_fader_db": -19.5,
     "master_fader_db": 0.0,
     "note": "Pre-existing session values preserved; no change to accompaniment audio, pitch, timing or level."
   },
   "change_from_current_session": {
-    "plugin": "Single Band EQ — High Shelf",
-    "frequency_hz": 4450,
-    "previous_gain_db": 1.5,
-    "new_gain_db": -1.0,
-    "gain_change_db": -2.5,
+    "plugin": "Single Band EQ — Parametric",
+    "frequency_hz": 350,
+    "previous_response": "Final Channel EQ was visually flat; replaced with this Single Band EQ",
+    "new_gain_db": 2.0,
     "q": 0.71,
-    "intent": "A small reduction in upper-frequency breath detail while retaining the current presence, body, reverb and natural dynamics."
+    "intent": "A gentle broad lift for low-register body, retaining the previously liked softer high shelf and existing reverb/dynamics."
   },
-  "approval_scope": "User liked the softer-air direction and requested more low-register body. The saved preset and settings values remain unchanged; a separate Bass Flute - Warm Body trial contains the next refinement."
+  "request": "I like this, I think it needs more body on the deep side.",
+  "naming_request": "It should also be renamed for the bass flute."
 }

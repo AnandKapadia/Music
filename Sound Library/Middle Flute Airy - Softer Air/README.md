@@ -1,10 +1,12 @@
 # Middle Flute Airy - Softer Air
 
-A **listening trial, awaiting user feedback**, saved on 2026-10-08 for the request “a little less breathy.” Based on the current Kudmayi flute channel. The original approved **Middle Flute Airy** preset remains unchanged.
+Saved on 2026-10-08 for the request “a little less breathy.” The user subsequently said **“I like this, I think it needs more body on the deep side.”** This confirms the softer-air direction while requesting a separate refinement for low-register body. The original approved **Middle Flute Airy** preset remains unchanged.
+
+The saved Softer Air native patch and effect values are preserved. The next refinement is saved separately as **Bass Flute - Warm Body**; the user clarified that the instrument is a bass bansuri, with its key unconfirmed in this session.
 
 ## What changed
 
-The high shelf at **4450 Hz** was reduced from **+1.5 dB to −1.0 dB**, a 2.5 dB reduction, with Q **0.71** unchanged. This is intended to soften upper-frequency breath detail while retaining the current fullness, presence and reverb. It is the only processing control changed in this task; no listening approval or exact reference match is claimed.
+The high shelf at **4450 Hz** was reduced from **+1.5 dB to −1.0 dB**, a 2.5 dB reduction, with Q **0.71** unchanged. This is intended to soften upper-frequency breath detail while retaining the current fullness, presence and reverb. It was the only processing control changed for this version. The user liked this direction; no exact reference match is claimed.
 
 ## Saved processing
 
