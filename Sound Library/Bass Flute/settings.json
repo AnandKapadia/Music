@@ -1,28 +1,53 @@
 {
   "schema_version": 1,
   "name": "Bass Flute",
-  "version": "1.1.0",
-  "approved_date": "2026-10-08",
-  "approval": "I do like this, can you save this as the bass flute option? Only retain the middle and the bass, all the middle settings are not needed",
-  "source_take": null,
-  "source_take_in_repository": false,
   "instrument": "Bass bansuri; exact key not confirmed for this saved option",
   "microphone": "beyerdynamic M160",
   "application": "GarageBand 10.4.8",
+  "reference_target": {
+    "title": "Ranjha \u2013 Flute Cover by Divyansh Shrivastava",
+    "url": "https://www.youtube.com/watch?v=N9OOJjfTjM8",
+    "start_seconds": 5,
+    "end_seconds": 15,
+    "pitch_version": "original reference",
+    "confirmed_date": "2026-10-07",
+    "status": "User-confirmed target sound; not an exact-match claim for this preset",
+    "production_chain": "Unknown",
+    "assistant_direct_audio_audition": false,
+    "note": "Inherited artistic target from the original Middle Flute Airy. User approved this sound as the bass-flute option; this is not a claim of an exact reference match."
+  },
+  "created_date": "2026-10-08",
+  "status": "user_approved",
+  "native_patch": "Bass Flute.patch",
+  "placement_note": "Keep the M160 outside the direct breath stream. No physical placement change was made or verified for this playback trial.",
+  "retirement_note": "Only Middle Flute Airy and Bass Flute remain active. Intermediate settings and native presets are backed up locally under .audio-work/retired-presets/ and older tracked versions remain in Git history.",
+  "version": "1.2.0",
+  "approved_date": "2026-10-08",
+  "updated_date": "2026-10-08",
+  "approval": "This is lovely. Can you update the bass settings so we can recreate this?",
+  "source_session": "Kesariya - Bass Flute - Production Mix.band (local only)",
+  "source_take": "Bass Flute#12.wav (local only)",
+  "source_take_in_repository": false,
+  "approval_scope": "User approved the produced Kesariya mix and requested saving its Bass Flute settings for reuse. Middle Flute Airy remains unchanged.",
+  "based_on": "Existing Bass Flute EQ and PlatinumVerb, with the approved production compressor and playback fader saved into the native patch.",
   "capture": {
     "interface": "Focusrite Scarlett 4i4 4th Gen",
     "input": 1,
     "channels": "mono",
     "sample_rate_hz": 44100,
     "track_pan": "center",
-    "track_fader_db": 0.0,
-    "track_fader_note": "Historical fader saved in the unchanged native tonal patch: 0 dB. After recalling the patch, apply the current manual volume profile: -10 dB playback or -4.0 dB recording/monitoring."
+    "track_fader_db": -10.0,
+    "track_fader_note": "The updated native patch saves -10 dB playback level. Manually switch to -4.0 dB for recording/monitoring, then back to -10 dB for playback."
   },
   "insert_chain": [
     {
       "position": 1,
       "plugin": "Compressor",
-      "enabled": false
+      "enabled": true,
+      "threshold_db": -18.0,
+      "ratio": 1.8,
+      "attack_ms": 26.0,
+      "makeup_db": 1.0
     },
     {
       "position": 2,
@@ -81,18 +106,20 @@
   "ambience": {
     "smart_control_display_percent": 10,
     "native_aux_tag": "Ambience/0.2s Long Ambience",
-    "native_send_scalar": 0.08503936976194382,
-    "note": "The current session UI displayed 10% before this trial. The native send scalar is preserved verbatim and matches the original Middle Flute Airy patch; do not interpret the scalar as percent or dB."
+    "native_send_scalar": 0.07086613029241562,
+    "note": "Observed project UI and exact saved native scalar are separate facts. Do not convert this scalar directly to percent or dB. A fresh native patch recall and solo render reproduced the approved flute render."
   },
   "extra_reverb_send": {
+    "smart_control_display_percent": 0,
     "native_aux_tag": "Small Hall/1.6s Short Vocal Hall",
-    "native_send_scalar": 0.0
+    "native_send_scalar": 0.1445668488740921,
+    "note": "The observed and recalled project Reverb control displayed 0%, while the native patch serializes this nonzero aux send. Preserve both observations; do not claim the saved send is zero. Native recall render verification passed."
   },
   "other_processing": {
     "noise_gate_enabled": false,
-    "master_echo_send": 0,
-    "master_reverb_send": 0,
-    "compression_enabled": false,
+    "master_echo_send_ui_display": 0,
+    "master_reverb_send_ui_display": 0,
+    "compression_enabled": true,
     "limiting_enabled": false
   },
   "hardware_last_observed_not_saved_in_patch": {
@@ -101,74 +128,13 @@
     "air": false,
     "inst": false,
     "clip_safe": false,
-    "freshly_rechecked_for_this_library_save": true,
+    "freshly_rechecked_for_this_library_save": false,
     "observed_date": "2026-10-08",
     "native_focusrite_preset": "Bass Flute - GarageBand - 68 dB",
     "settings_path": "../../Hardware/Focusrite Scarlett 4i4/settings.json",
-    "note": "Observed and saved from the live interface without changing gain. Supersedes the old unverified 44 dB entry. Hardware settings are saved separately from the unchanged GarageBand tone patch."
+    "note": "The previously verified 68 dB hardware preset and routing are unchanged by this tonal update; hardware is saved separately from the GarageBand patch."
   },
-  "monitoring": "The unchanged native tone patch was saved with monitoring off for playback. Use -10 dB track fader for playback; use -4.0 dB and enable monitoring on only one mono input 1 mic track for recording/live playing. Keep Scarlett direct Analogue 1 muted in Mix A.",
-  "native_patch": "Bass Flute.patch",
-  "scope_note": "Parent agent verified the tonal controls in GarageBand and confirmed the final patch retains the accepted Outer Lift Bass chain. User explicitly approved this as Bass Flute. No assistant direct audio audition or exact-reference claim is made. Hardware gain, placement and master/backing balance are separate.",
-  "placement_note": "Keep the M160 outside the direct breath stream. No physical placement change was made or verified for this playback trial.",
-  "reference_target": {
-    "title": "Ranjha – Flute Cover by Divyansh Shrivastava",
-    "url": "https://www.youtube.com/watch?v=N9OOJjfTjM8",
-    "start_seconds": 5,
-    "end_seconds": 15,
-    "pitch_version": "original reference",
-    "confirmed_date": "2026-10-07",
-    "status": "User-confirmed target sound; not an exact-match claim for this preset",
-    "production_chain": "Unknown",
-    "assistant_direct_audio_audition": false,
-    "note": "Inherited artistic target from the original Middle Flute Airy. User approved this sound as the bass-flute option; this is not a claim of an exact reference match."
-  },
-  "created_date": "2026-10-08",
-  "status": "user_approved",
-  "based_on": "User-approved Middle Flute Airy - Outer Lift Bass tonal chain; renamed Bass Flute",
-  "source_session": "Kudmayi - Original Pitch - Middle Flute Airy.band (local only)",
-  "request_context": "User approved this sound as the bass-flute option and requested retaining only the original middle-flute sound and this bass sound. Intermediate presets were retired to a local ignored archive.",
-  "comparison_source": "Accepted on the existing Kudmayi recording; audio regions and timing preserved locally, with no recording in repository.",
-  "session_state_at_save": {
-    "track_name": "Bass Flute",
-    "track_pan": "center",
-    "flute_fader_db": 0.0,
-    "input": "mono Scarlett 1",
-    "monitoring_enabled": false,
-    "native_channel_is_muted": false,
-    "native_channel_is_solo": false,
-    "note": "Historical state of the original native tonal patch; its 0 dB fader and monitoring-off state are unchanged. Current preferred manual levels are -10 dB playback and -4.0 dB recording/monitoring."
-  },
-  "changes_from_original_current_session": [
-    {
-      "plugin": "Single Band EQ",
-      "type": "Low Shelf",
-      "frequency_hz": 300,
-      "gain_db": 3.0,
-      "q": 0.71
-    },
-    {
-      "plugin": "Single Band EQ",
-      "type": "High Shelf",
-      "frequency_hz": 6000,
-      "gain_db": 1.5,
-      "q": 0.71
-    }
-  ],
-  "independent_variant_note": "The duplicated 450 Hz trial insert was replaced by the 300 Hz low shelf; no 450 Hz or 900 Hz comparison boost remains. The original 1700 Hz presence bell and 4450 Hz +1.5 dB high shelf are retained. The new 6000 Hz high shelf is additional to the 4450 Hz shelf.",
-  "change_from_outer_lift": {
-    "plugin": "Single Band EQ",
-    "type": "Low Shelf",
-    "frequency_hz": 300,
-    "previous_gain_db": 1.0,
-    "new_gain_db": 3.0,
-    "gain_change_db": 2.0,
-    "q": 0.71,
-    "note": "Only this gain changed after duplicating Outer Lift; other EQ, reverb, ambience, fader and audio regions were retained."
-  },
-  "approval_scope": "Approved as the retained bass-flute option. The earlier middle-flute preset remains unchanged. On 2026-10-08 the user also approved manual Bass Flute track levels of -10 dB playback and -4.0 dB recording/monitoring and requested saving the live Focusrite setup.",
-  "retirement_note": "Only Middle Flute Airy and Bass Flute remain active. Intermediate settings and native presets are backed up locally under .audio-work/retired-presets/ and older tracked versions remain in Git history.",
-  "updated_date": "2026-10-08",
+  "monitoring": "Saved for playback with monitoring off, unmuted and not soloed. For recording/live playing, manually set -4.0 dB and enable monitoring on only one mono Scarlett input 1 mic track. Keep direct Analogue 1 muted in Scarlett Mix A.",
   "volume_profiles": {
     "approved_date": "2026-10-08",
     "approval": "I like the volumen to be -10 on playback, and -4.0 on record for the bass flute.",
@@ -178,7 +144,83 @@
     "switching": "manual",
     "automatic_switching_configured": false,
     "raw_recording_gain_changed_by_track_fader": false,
-    "native_tonal_patch_rewritten_for_volume_preferences": false,
-    "note": "Set the track fader after recalling the sound and when changing between recording and playback. These preferences do not change the Focusrite preamp gain or the raw recorded audio."
+    "native_tonal_patch_rewritten_for_volume_preferences": true,
+    "note": "Native patch now saves -10 dB playback level. Recording/monitoring remains a manual change to -4.0 dB; no automatic switching is configured. Track fader does not change dry input recording gain."
+  },
+  "session_state_at_save": {
+    "track_name": "Bass Flute",
+    "track_pan": "center",
+    "flute_fader_db": -10.0,
+    "input": "mono Scarlett 1",
+    "monitoring_enabled": false,
+    "native_channel_is_muted": false,
+    "native_channel_is_solo": false
+  },
+  "verification": {
+    "native_compressor_values_and_enable_verified": true,
+    "native_fader_db_verified": -10.0,
+    "platinumverb_and_four_eq_parameter_payloads_byte_identical_to_previous_patch": true,
+    "auhipass_bypass_and_state_unchanged": true,
+    "native_recall_render_qa": "passed",
+    "note": "Recalled the updated native patch after switching the temporary track to Middle Flute Airy; solo 24-bit render with Auto Normalize off reproduced the approved native flute render over 77 seconds. Native sends differ from the older patch but correctly reproduce the approved production. No assistant direct audio audition is claimed.",
+    "recall_verified": true,
+    "recall_audio_comparison": {
+      "frames_compared": 3395700,
+      "seconds": 77.0,
+      "sample_rates": [
+        44100,
+        44100
+      ],
+      "max_absolute_difference": 3.5762786865234375e-07,
+      "difference_rms_dbfs": -161.95167442882183,
+      "relative_rms_difference_db": -135.78253090636983,
+      "gain_ratio_db": -3.8742530998868936e-10,
+      "correlation": 0.9999999999999976
+    }
+  },
+  "production_recipe": {
+    "scope": "Kesariya-specific project and final export; these backing, pitch and mastering settings are not baked into the reusable Bass Flute track patch.",
+    "project": "Kesariya - Bass Flute - Production Mix.band (local only)",
+    "flute_track_fader_db": -10.0,
+    "flute_pitch_correction": "none",
+    "backing_track_fader_db": -13.0,
+    "backing_aupitch_cents": 20,
+    "backing_pitch_note": "This +20-cent correction matched this performance; recheck tuning for each future song/take instead of applying it universally.",
+    "native_project_master_fader_db": 0.0,
+    "export_range_seconds": [
+      0,
+      77
+    ],
+    "fade_in_seconds": 0.04,
+    "fade_out_range_seconds": [
+      73,
+      77
+    ],
+    "post_export_master_gain_db": 6.16,
+    "integrated_loudness_lufs": -16.0,
+    "limiter_used": false,
+    "wav": {
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "bit_depth": 24
+    },
+    "mp3": {
+      "bitrate_kbps": 320
+    },
+    "measured_final_wav_true_peak_dbfs_4x": -4.6886239453592555,
+    "measured_final_wav_clipped_samples": 0,
+    "master_gain_note": "The +6.16 dB gain and fades reproduce this export. For different performances, measure loudness and peaks rather than blindly reusing the gain.",
+    "garageband_auto_normalize_for_native_export": false,
+    "auto_normalize_note": "Disable Export projects at full volume for the native render; restore the prior preference after exporting. Do not apply +6.16 dB to an already auto-normalized export.",
+    "fade_curve": "raised cosine",
+    "fade_in_formula": "0.5 * (1 - cos(linspace(0, pi, int(0.04 * sample_rate))))",
+    "fade_out_formula": "0.5 * (1 + cos(linspace(0, pi, int(4 * sample_rate))))",
+    "backing_aupitch": {
+      "pitch_cents": 20,
+      "effect_blend_percent": 100,
+      "smoothness_percent": 50,
+      "tightness_percent": 50,
+      "quality": "Maximum"
+    }
   }
 }

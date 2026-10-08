@@ -1,44 +1,42 @@
 # Bass Flute
 
-**User-approved on 2026-10-08** as the retained bass-flute sound: “I do like this, can you save this as the bass flute option? Only retain the middle and the bass, all the middle settings are not needed”.
+**Version 1.2.0 — approved 2026-10-08.** After hearing the produced Kesariya mix, the user said: “This is lovely. Can you update the bass settings so we can recreate this?”
 
-This is the accepted Outer Lift Bass tonal chain, saved under the simple name **Bass Flute**. The original **Middle Flute Airy** is the other retained sound and remains unchanged. The bass bansuri's exact key was not confirmed for this save.
+The updated **Bass Flute** patch saves the gentle production compressor and **−10 dB playback fader**, retaining the accepted EQ and PlatinumVerb settings. **Middle Flute Airy** remains unchanged; these are the two active sounds.
 
 ## Saved processing
 
 | Order | Effect | State / settings |
 | --- | --- | --- |
-| 1 | Compressor | Bypassed |
+| 1 | Compressor | On; threshold **−18 dB**, ratio **1.8:1**, attack **26 ms**, makeup **+1 dB** |
 | 2 | AUHipass | Bypassed |
 | 3 | PlatinumVerb | On; predelay 28 ms; decay 2.30 s; high cut 6000 Hz; spread 100%; dry 100%; wet 25% |
 | 4 | Single Band EQ — Parametric | On; 1700 Hz; +1.5 dB; Q 0.51 |
 | 5 | Single Band EQ — High Shelf | On; 4450 Hz; +1.5 dB; Q 0.71 |
-| 6 | Single Band EQ — Low Shelf | On; **300 Hz; +3.0 dB; Q 0.71** |
-| 7 | Single Band EQ — High Shelf | On; **6000 Hz; +1.5 dB; Q 0.71** |
+| 6 | Single Band EQ — Low Shelf | On; 300 Hz; +3.0 dB; Q 0.71 |
+| 7 | Single Band EQ — High Shelf | On; 6000 Hz; +1.5 dB; Q 0.71 |
 
-The last two shelves distinguish the tonal chain from the original middle-flute sound. There is no 350 Hz, 450 Hz or 900 Hz trial boost in this preset. The 6000 Hz shelf is additional to the retained 4450 Hz shelf.
+PlatinumVerb's dry and wet controls are independent. The noise gate is off; no limiter is used. The four EQ parameter payloads, PlatinumVerb parameters and AUHipass state match the previous patch exactly.
 
-Current session Ambience displayed **10%**. Native routing is `Ambience/0.2s Long Ambience`, with send scalar `0.08503936976194382`. The scalar is not a percentage or dB value; the saved native payload and observed UI display are recorded separately. Additional reverb send and master echo/reverb sends are zero. Noise gate is off; no compression or limiting is applied. PlatinumVerb's dry and wet values are independent controls.
+The project UI displayed **Ambience 10%, Reverb 0%, master Echo/Reverb 0**. The saved native patch separately contains `Ambience/0.2s Long Ambience` send scalar `0.07086613029241562` and `Small Hall/1.6s Short Vocal Hall` send scalar `0.1445668488740921`. These native scalars are not percentages or dB values. Preserve the native patch to retain its routing; do not replace its nonzero saved Small Hall send with a claimed zero. A fresh recall and solo render reproduced the approved production sound.
 
-## Recall
+## Recall and record
 
-1. Select a mono audio track and choose **Library → User Patches → Bass Flute**. It is installed on this Mac.
-2. Use mono Scarlett input 1 for the M160. The patch was saved **unmuted**, with **monitoring off** for playback. For live playing, enable monitoring on only the desired mic track; keep Scarlett direct mic monitoring muted to avoid doubling.
-3. After recalling the patch, manually set the Bass Flute track fader to **-10 dB for playback** or **-4.0 dB while recording**. These preferences were confirmed on 2026-10-08. The unchanged native tonal patch still contains its historical 0 dB fader; recalling it does not automatically apply or switch the new levels. Set accompaniment balance separately.
-4. On another Mac, copy the entire `Bass Flute.patch` folder to `~/Music/Audio Music Apps/Patches/Audio/`, then reopen GarageBand if needed.
+1. Select a mono audio track and choose **Library → User Patches → Bass Flute**. The patch is installed on this Mac and saves center pan, Scarlett input 1 and the **−10 dB playback level**.
+2. For recording/live playing, manually change the fader to **−4.0 dB** and enable monitoring on only the desired mic track. Return to **−10 dB** for playback. Switching is manual; the patch is saved with monitoring off, unmuted and not soloed.
+3. Use the saved **Focusrite “Bass Flute - GarageBand - 68 dB”** preset. Its input 1 gain is 68 dB; 48V, Inst, Air and Clip Safe are off. Mix A feeds headphones, direct Analogue 1 is muted, and Playback 1/2 is at −12 dB. Hardware settings remain separate and unchanged; see [hardware settings](<../../Hardware/Focusrite Scarlett 4i4/README.md>).
+4. On another Mac, copy the entire `Bass Flute.patch` folder to `~/Music/Audio Music Apps/Patches/Audio/`, then reopen GarageBand if necessary.
 
-## Gain and monitoring
+The track fader affects playback and software monitoring, not dry recording gain. The saved sound uses the **beyerdynamic M160**, kept outside the direct breath stream. Keep flute, playing level, mic distance and room consistent when recreating the result.
 
-The Bass Flute track fader controls playback and software monitoring volume. It does **not** change the dry input recording level. Use the **Focusrite input 1 preamp gain of 68 dB**, observed live and saved on 2026-10-08, for the saved hardware setup. Input 1 has 48V, Inst, Air and Clip Safe off. Gain was preserved as found; this is separate from the tonal patch.
+## Recreate the approved Kesariya export
 
-The native Focusrite preset **Bass Flute - GarageBand - 68 dB** and its verified routing are saved in the [hardware settings](<../../Hardware/Focusrite Scarlett 4i4/README.md>). Mix A feeds the headphones; direct Analogue 1 is muted and GarageBand Playback 1/2 is at -12 dB. Use only one monitored mono input 1 flute track.
+Use the local **Kesariya - Bass Flute - Production Mix.band** project and Bass Flute take #12. Its flute fader is **−10 dB**, accompaniment **−13 dB**, and project master **0 dB**. The backing uses **AUPitch +20 cents**, Effect Blend 100%, Smoothness 50%, Tightness 50%, quality Maximum; the flute has no pitch correction. That pitch offset fits this performance and must be checked separately for future takes.
 
-Keep the M160 outside the direct breath stream. A preset does not reproduce differences in breath, flute, distance or room.
+Disable GarageBand **Auto Normalize / Export projects at full volume** for the native export, then restore the prior preference afterward. The finished export uses **0–77 seconds**, raised-cosine fades of **0.04 seconds in** and **73–77 seconds out**, and **+6.16 dB gain after the native export**, yielding **−16 LUFS**. Do not add this gain to an already auto-normalized file. Final WAV is stereo 24-bit/44.1 kHz; MP3 is 320 kbps. Measured WAV true peak is about **−4.69 dBFS**, with no clipping and no limiter. These fades and master gain are an export recipe, not part of the track patch. Measure new performances before reusing that gain.
 
-## Preservation
+## Preservation and verification
 
-The source is the local **Kudmayi - Original Pitch - Middle Flute Airy.band** session. Recordings, backing and projects remain local and are excluded from Git. Intermediate sound-library folders and native User Patches were copied and hash-verified in an ignored local archive under `.audio-work/retired-presets/` before retirement. Their earlier tracked versions remain available in Git history; the active library now has only **Middle Flute Airy** and **Bass Flute**.
+The previous patch is backed up locally before replacement and remains available in Git history. Audio, recordings and GarageBand projects stay local and are excluded from Git. `settings.json` records the controls and the Kesariya recipe; `manifest.sha256` verifies the three small native patch files.
 
-The inherited artistic reference is the [Ranjha flute cover](https://www.youtube.com/watch?v=N9OOJjfTjM8), especially 0:05–0:15. Its production chain is unknown, and the assistant has not directly auditioned its audio. User approval of this bass sound is not an exact-match claim.
-
-`Bass Flute.patch` remains a byte-for-byte copy of the original accepted native User Patch; its EQ/reverb and the Middle Flute Airy patch were not changed for the volume and hardware save. `settings.json` records verified controls, and `manifest.sha256` verifies the three small native files. The native channel name is **Bass Flute**.
+The new native compressor settings and −10 dB fader are verified from the saved payload. EQ and PlatinumVerb parameters are unchanged. A fresh recall and solo 24-bit render matched the approved native flute export over all 77 seconds: correlation 0.9999999999999976, RMS difference −161.95 dBFS and effectively zero gain difference. This verifies the complete recalled processing, including the saved sends. No assistant direct audio audition is claimed.
