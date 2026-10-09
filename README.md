@@ -1,6 +1,6 @@
 # Music
 
-Private music settings and production notes at [AnandKapadia/Music](https://github.com/AnandKapadia/Music).
+Music settings and production notes at [AnandKapadia/Music](https://github.com/AnandKapadia/Music).
 
 For vocal and guitar productions, see [Sentral Music](<Sentral Music/README.md>), starting with **Layla — Ian on vocals**. The flute sound library below retains the two bansuri sounds for the beyerdynamic M160 and Scarlett setup.
 
