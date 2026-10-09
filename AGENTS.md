@@ -1,6 +1,9 @@
-# Flute settings repository
+# Music settings repository
 
 The user requested a private personal GitHub repository for the EQ, reverb, ambience, and sound settings developed together. Save accepted new sounds and commit/push their settings when this repository is available.
+
+- GitHub repository: `AnandKapadia/Music`, renamed from `flute` on 2026-10-09 at the user's request. Keep it private. Local checkout remains `/Users/anand/Documents/flute`.
+- `Sentral Music/` holds the separate vocal/guitar production notes. Ian is the vocalist on its Layla recording. Do not conflate these settings with flute presets. Offline production entries may contain notes and settings without a native `.patch`; clearly identify what is and is not saved in GarageBand.
 
 - Never stage or upload recordings, tracks, accompaniment, reference audio, exports, `.band` projects, processing caches, models, `.audio-work`, or `.audio-tools`.
 - Keep `.gitignore` as a default-deny allowlist. Use explicit staged paths; never force-add an ignored file.

@@ -1,6 +1,12 @@
-# Flute sound library
+# Music
 
-Two retained bansuri sounds for the beyerdynamic M160 and Scarlett setup. This settings repository stays private in the personal GitHub account.
+Private music settings and production notes at [AnandKapadia/Music](https://github.com/AnandKapadia/Music).
+
+For vocal and guitar productions, see [Sentral Music](<Sentral Music/README.md>), starting with **Layla — Ian on vocals**. The flute sound library below retains the two bansuri sounds for the beyerdynamic M160 and Scarlett setup.
+
+The local checkout remains in `Documents/flute`; the GitHub repository was renamed from `flute` to `Music` on 2026-10-09.
+
+## Flute sound library
 
 | Sound | Use | Status |
 | --- | --- | --- |

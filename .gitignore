@@ -20,3 +20,10 @@
 !/Hardware/Focusrite Scarlett 4i4/settings.json
 !/Hardware/Focusrite Scarlett 4i4/manifest.sha256
 !/Hardware/Focusrite Scarlett 4i4/Bass Flute - GarageBand - 68 dB.xml
+
+# Sentral Music production notes and settings only.
+!/Sentral Music/
+!/Sentral Music/README.md
+!/Sentral Music/Layla/
+!/Sentral Music/Layla/README.md
+!/Sentral Music/Layla/settings.json

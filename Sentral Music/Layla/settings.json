@@ -1,0 +1,366 @@
+{
+  "project": "Sentral Music",
+  "song": "Layla",
+  "vocalist": "Ian",
+  "date": "2026-10-09",
+  "status": "User accepted with Great! and requested notes saved to Git",
+  "reference": {
+    "title": "Eric Clapton — Layla (Acoustic Live), Unplugged",
+    "url": "https://www.youtube.com/watch?v=EOs0qeiJyIg",
+    "audio_in_output": false
+  },
+  "sources": {
+    "vocal": "GarageBand track 7, layla_7#01.wav",
+    "guitar": "GarageBand track 5, existing native stem with original follow-tempo behavior",
+    "excluded": "Old vocal on track 6",
+    "guitar_performer": "not confirmed"
+  },
+  "render_type": "Offline production; earlier native GarageBand project unchanged",
+  "mix_settings": {
+    "vocal_peaks": [
+      [
+        185,
+        1.5,
+        0.7
+      ],
+      [
+        430,
+        -3.0,
+        0.85
+      ],
+      [
+        1800,
+        -2.0,
+        0.75
+      ]
+    ],
+    "vocal_shelf": [
+      4200,
+      1.0
+    ],
+    "compressor": {
+      "threshold_db": -17,
+      "ratio": 2.0,
+      "attack_ms": 22,
+      "release_ms": 140
+    },
+    "guitar_extra_peaks": [
+      [
+        240,
+        1.0,
+        0.7
+      ],
+      [
+        2300,
+        -1.0,
+        0.9
+      ]
+    ],
+    "guitar_extra_shelf": [
+      4500,
+      -1.5
+    ],
+    "vocal_over_guitar_db": 4.5,
+    "vocal_room_relative_db": -19,
+    "guitar_room_relative_db": -23,
+    "room_size": 0.32,
+    "rationale": "Reference estimated vocal has more 150-350Hz body and less relative 700-3000Hz energy. Use bounded EQ, not full spectral matching between different singers. Reference median vocal-over-full-band is 2.04dB; choose 4.5dB over the single guitar to retain clear lead while moving closer from previous 7.37dB. Reference pitch remains expressive; tune only 20 stable interiors to actual accompaniment, no global pitch shift."
+  },
+  "vocal_highpass": {
+    "hz": 75,
+    "slope_db_per_octave": 12
+  },
+  "phrase_rides": {
+    "max_abs_db": 2.5,
+    "strength": 0.35,
+    "rms_window_ms": 10,
+    "envelope_gaussian_sigma_frames": 20,
+    "ride_gaussian_sigma_frames": 15,
+    "activity_threshold_db": -36
+  },
+  "guitar_baked_source_eq": {
+    "highpass_hz": 75,
+    "highpass_slope_db_per_octave": 12,
+    "highpass_q": 0.71,
+    "bell_hz": 250,
+    "bell_db": -2.5,
+    "bell_q": 0.71
+  },
+  "guitar_compressor": {
+    "threshold_db": -30,
+    "ratio": 1.5,
+    "attack_ms": 28,
+    "release_ms": 150
+  },
+  "guitar_gain_relative_to_native_stem_db": 7.890398979187012,
+  "room": {
+    "algorithm": "Freeverb",
+    "room_size": 0.32,
+    "damping": 0.65,
+    "width": 0.9,
+    "return_bandpass_hz": [
+      180,
+      5800
+    ],
+    "bandpass_order": 2,
+    "vocal_predelay_ms": 18,
+    "guitar_predelay_ms": 10,
+    "return_levels": "RMS relative to direct, as specified in mix_settings"
+  },
+  "tuning": {
+    "method": "Selective PSOLA on confident stable note interiors, 60% of note-center deviation toward accompaniment tuning, maximum 18 cents; 50ms blends",
+    "target_tuning_cents": 7.9999999999999964,
+    "changed_intervals": [
+      {
+        "start": 43.513866213151935,
+        "end": 43.79386621315194,
+        "midi": 55.267506856155,
+        "note": 55,
+        "cents": 26.750685615500203,
+        "spread_cents": 17.28405569885183,
+        "correction_cents": -11.250411369300123,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 48.88386621315194,
+        "end": 49.17386621315194,
+        "midi": 53.2407652854424,
+        "note": 53,
+        "cents": 24.076528544240006,
+        "spread_cents": 22.312182084395005,
+        "correction_cents": -9.645917126544004,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 53.89386621315194,
+        "end": 54.13386621315194,
+        "midi": 53.32499621586203,
+        "note": 53,
+        "cents": 32.49962158620292,
+        "spread_cents": 31.188080365942028,
+        "correction_cents": -14.699772951721753,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 66.52386621315193,
+        "end": 66.97386621315195,
+        "midi": 60.766310752282806,
+        "note": 61,
+        "cents": -23.368924771719435,
+        "spread_cents": 38.01415091161289,
+        "correction_cents": 18.0,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 67.14386621315194,
+        "end": 67.38386621315195,
+        "midi": 60.77488190921742,
+        "note": 61,
+        "cents": -22.511809078257983,
+        "spread_cents": 12.62690607835708,
+        "correction_cents": 18.0,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 71.91386621315193,
+        "end": 72.21386621315195,
+        "midi": 58.9603489906579,
+        "note": 59,
+        "cents": -3.9651009342101418,
+        "spread_cents": 26.438511104045403,
+        "correction_cents": 7.179060560526083,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 73.85386621315195,
+        "end": 74.33386621315195,
+        "midi": 53.85912939950833,
+        "note": 54,
+        "cents": -14.087060049166666,
+        "spread_cents": 35.209006713543545,
+        "correction_cents": 13.252236029499997,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 79.77386621315193,
+        "end": 80.42386621315194,
+        "midi": 56.87465178121438,
+        "note": 57,
+        "cents": -12.534821878561786,
+        "spread_cents": 29.030505879865842,
+        "correction_cents": 12.320893127137069,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 83.66386621315193,
+        "end": 83.93386621315194,
+        "midi": 55.25073522057855,
+        "note": 55,
+        "cents": 25.073522057854802,
+        "spread_cents": 21.861711283489882,
+        "correction_cents": -10.244113234712882,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 89.02386621315193,
+        "end": 89.33386621315195,
+        "midi": 53.183632271840246,
+        "note": 53,
+        "cents": 18.363227184024566,
+        "spread_cents": 24.224351126490262,
+        "correction_cents": -6.217936310414742,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 95.09386621315194,
+        "end": 95.37386621315194,
+        "midi": 54.801467613143046,
+        "note": 55,
+        "cents": -19.853238685695374,
+        "spread_cents": 26.154845831266726,
+        "correction_cents": 16.71194321141722,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 119.93386621315194,
+        "end": 120.59386621315194,
+        "midi": 56.90302936559179,
+        "note": 57,
+        "cents": -9.697063440820841,
+        "spread_cents": 30.033480767507115,
+        "correction_cents": 10.618238064492502,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 125.42386621315194,
+        "end": 125.64386621315195,
+        "midi": 48.35310368251898,
+        "note": 48,
+        "cents": 35.31036825189773,
+        "spread_cents": 25.04668456326513,
+        "correction_cents": -16.38622095113864,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 129.15386621315193,
+        "end": 129.43386621315193,
+        "midi": 53.25653590186174,
+        "note": 53,
+        "cents": 25.653590186173858,
+        "spread_cents": 26.935857707442068,
+        "correction_cents": -10.592154111704316,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 129.86386621315194,
+        "end": 130.19386621315192,
+        "midi": 56.91905333095875,
+        "note": 57,
+        "cents": -8.094666904125347,
+        "spread_cents": 24.36406013889396,
+        "correction_cents": 9.656800142475205,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 140.55386621315193,
+        "end": 140.94386621315192,
+        "midi": 56.874260265606615,
+        "note": 57,
+        "cents": -12.57397343933846,
+        "spread_cents": 30.745815351377104,
+        "correction_cents": 12.344384063603073,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 209.71386621315193,
+        "end": 210.06386621315193,
+        "midi": 53.19459326591323,
+        "note": 53,
+        "cents": 19.45932659132268,
+        "spread_cents": 39.40972077738607,
+        "correction_cents": -6.875595954793609,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 214.25386621315195,
+        "end": 214.48386621315194,
+        "midi": 54.970167251498125,
+        "note": 55,
+        "cents": -2.983274850187456,
+        "spread_cents": 9.474573529811892,
+        "correction_cents": 6.589964910112472,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 214.74386621315193,
+        "end": 215.03386621315192,
+        "midi": 53.3103170942761,
+        "note": 53,
+        "cents": 31.03170942761011,
+        "spread_cents": 24.149166089133445,
+        "correction_cents": -13.819025656566067,
+        "target_tuning_cents": 7.9999999999999964
+      },
+      {
+        "start": 230.50386621315195,
+        "end": 230.80386621315193,
+        "midi": 54.96585479761087,
+        "note": 55,
+        "cents": -3.4145202389133544,
+        "spread_cents": 24.541144045812047,
+        "correction_cents": 6.848712143348011,
+        "target_tuning_cents": 7.9999999999999964
+      }
+    ],
+    "count": 20,
+    "seconds_with_blend": 6.840000000000018,
+    "max_correction_cents": 18.0
+  },
+  "timing": {
+    "source_offset_samples": 111412,
+    "sample_rate": 44100,
+    "vocal_region_end_seconds": 239.36973684210525,
+    "performance_nudge": false
+  },
+  "mastering": {
+    "gain_db": 0.8099999999999987,
+    "ffmpeg_filter": "volume=0.81000dB,aresample=176400,alimiter=limit=0.812830516:attack=5:release=100:level=false:latency=true,aresample=44100",
+    "fade_in_seconds": 0.04,
+    "fade_out_start_seconds": 240,
+    "fade_out_end_seconds": 245,
+    "stems": "Include common gain and fades; before final mix limiter"
+  },
+  "validation": {
+    "wav": {
+      "input_i": -18.0,
+      "input_tp": -1.8,
+      "input_lra": 7.5,
+      "frames": 10804500,
+      "sample_rate": 44100,
+      "duration_seconds": 245.0,
+      "channels": 2,
+      "peak_db": -1.798482408793207,
+      "clipped_samples": 0,
+      "finite": true,
+      "stereo_correlation": 0.9926758284776268
+    },
+    "mp3": {
+      "input_i": -18.0,
+      "input_tp": -1.78,
+      "input_lra": 7.5,
+      "frames": 10804500,
+      "sample_rate": 44100,
+      "duration_seconds": 245.0,
+      "channels": 2,
+      "peak_db": -1.777538382294814,
+      "clipped_samples": 0,
+      "finite": true,
+      "stereo_correlation": 0.9926737664188824
+    }
+  },
+  "local_output_folder": "Documents/ChatGPT/Music/Exports/Layla - Acoustic Reference Mix",
+  "local_work_folder": "Documents/ChatGPT/Music/.audio-work/layla-reference",
+  "preservation": "Raw take, earlier mix, native project, Focusrite settings and flute presets preserved",
+  "capture_limitation": "Original raw vocal has some captured clipping; not reconstructed",
+  "assistant_direct_audio_audition": false
+}
